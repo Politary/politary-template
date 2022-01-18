@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { CustomLink } from '../CustomLink/CustomLink';
+import { Container } from './Layout.styles';
 
 export const Layout = () => {
     return (
@@ -8,7 +9,9 @@ export const Layout = () => {
                 <p>Header</p>
                 <CustomLink to="/">Home</CustomLink>
             </header>
-            <Outlet />
+            <Container>
+                <Outlet />
+            </Container>
             <footer>footer</footer>
         </>
     );
